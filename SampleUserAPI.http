@@ -1,0 +1,39 @@
+// 1. Get all users
+GET http://{{server}}:{{port}}/users
+Accept: application/json
+
+###
+// 2. Get user has user id
+GET http://{{server}}:{{port}}/users/{{user-id}}
+Accept: application/json
+
+###
+// 3. Create user
+POST http://{{server}}:{{port}}/users
+Content-Type: application/json
+
+{"name": "Le Thi Ca Chua","email": "cachua@cachua.com"}
+###
+// 4. Get all users
+GET http://{{server}}:{{port}}/users
+Accept: application/json
+
+###
+// 5. Update user
+PUT http://{{server}}:{{port}}/users/{{user-id}}
+Content-Type: application/json
+
+{"name": "Tran Van Ot","email": "tranvanot@cachua.com"}
+###
+// 6. Get updated user
+PUT http://{{server}}:{{port}}/users/{{user-id}}
+Content-Type: application/json
+
+###
+// 7. Delete user
+DELETE http://{{server}}:{{port}}/users/4
+
+###
+// 8. Get all users
+GET http://{{server}}:{{port}}/users
+
