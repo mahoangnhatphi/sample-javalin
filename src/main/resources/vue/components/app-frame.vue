@@ -2,6 +2,7 @@
   <div class="app-frame">
     <header>
       <span>JavalinVue demo app</span>
+      <span v-if="$javalin.state.currentUser">Current User: '{{$javalin.state.currentUser}}'</span>
     </header>
     <slot></slot>
   </div>
